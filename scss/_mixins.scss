@@ -1,0 +1,7 @@
+@mixin my-museo {
+  font-family: sans-serif;
+  
+  .wf-active & {
+    font-family: "museo-sans";
+  }
+}

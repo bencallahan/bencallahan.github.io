@@ -1,0 +1,312 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $almost-white;
+  border-top: 0 black solid;
+  -webkit-transition-property: border-top-width;
+  -webkit-transition-duration: .25s;
+  -moz-transition-property: border-top-width;
+  -moz-transition-duration: .25s;
+  -ms-transition-property: border-top-width;
+  -ms-transition-duration: .25s;
+  -o-transition-property: border-top-width;
+  -o-transition-duration: .25s;
+  transition-property: border-top-width;
+  transition-duration: .25s;
+  
+  &.largish {
+    background: $primary-color url(../i/ben-logo-768.png) 50% bottom fixed no-repeat;
+
+    @include sb-media(90em) {
+      background-position-x: 102%;
+      .canvas {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+.canvas {
+  margin: 0;
+  background-color: $almost-white;
+  padding: 0 5% 1.5em 5%;
+  position: relative;
+  float: left;
+  z-index: 10; // to cover the affiliations
+    
+  .largish & {
+    margin-bottom: 650px;
+    -moz-box-shadow: 2px 2px 50px 2px #000;
+    -webkit-box-shadow: 2px 2px 50px 2px #000;
+    box-shadow: 2px 2px 50px 2px #000;
+  }
+  
+  @include sb-media(36em) {
+    padding: 0 3% 1.5em 3%;
+  }
+  @include sb-media(90em) {
+    max-width: 75%;
+  }
+}
+
+
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+h1.major {
+  @include my-museo;
+
+  font-size: 1.35em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $almost-black;//$primary-color;
+  margin: 0;
+  padding: 2.4em 0 0 0;
+
+  .no-js & {
+    padding-top: .5em;
+    font-size: 2em;
+  }
+  
+  .wf-active & {
+    font-size: 1.35em;
+
+    @include sb-media(36em) {
+      font-size: 2em;
+      padding-top: 1.6em;
+    }
+  }
+  
+  .backgroundsize /* .smallish */ & {
+    padding-right: 100px;
+    vertical-align: baseline;
+    min-height: 97px;
+    background: url(../i/ben-logo-200.gif) right top no-repeat;
+    background-size: 100px 97.5px;
+  }
+}
+
+
+
+h2 {
+  @include my-museo;
+  font-weight: 700;
+  padding: 1em 0 .5em 0;
+  margin: 0;
+  
+  text-transform: uppercase;
+  color: $secondary-color;
+  
+  clear: left;
+}
+
+
+
+.group {
+  @include sb-media(36em) {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+    
+    &:nth-child(2n + 1) {
+      float: right;
+      margin: 0;
+    }
+  }
+
+  ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+        
+    a, time, b, p {
+      @include my-museo;
+      font-weight: 300;
+      font-weight: 300;
+      line-height: 1.4em;
+    }
+    
+    time, b {
+      font-size: .9em;
+      color: $secondary-color;
+      display: block;
+    }
+    
+    a.drill-down {
+      font-weight: 500;
+      font-size: 1.2em;
+      margin-bottom: .25em;
+    }
+    
+    p {
+      margin: .25em 0;
+      padding: 0;
+    }
+    
+    li {
+      margin-bottom: 1.5em;
+    }
+  }
+  
+  h3 {
+    @include my-museo;
+    color: $secondary-color;
+    padding: 1em 0 .5em 0;
+    margin: 0;
+  }
+  ol.past {
+    font-size: .9em;
+  }
+}
+
+
+ol.past li {
+  width: 100%;
+  margin-right: 0;
+
+  @include sb-media(20em) {
+    width: 47%;
+    margin-right: 3%;
+    float: left;
+    clear: left;
+
+    &:nth-child(2n) {
+      float: right;
+      clear: none;
+      margin-right: 0;
+    }
+  }
+
+  @include sb-media(36em) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  @include sb-media(62em) {
+    width: 47%;
+    margin-right: 3%;
+    float: left;
+    clear: left;
+
+    &:nth-child(2n) {
+      float: right;
+      clear: none;
+      margin-right: 0;
+    }
+  }
+}
+
+
+aside {
+  .aka {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: .75em;
+    letter-spacing: .1em;
+    padding: .2em .5em;
+    background-color: #ccc;
+    color: #777;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    cursor: pointer;
+
+    .js & {
+      position: absolute;
+      left: 5%;
+      top: 1em;
+      z-index: 15;
+      -webkit-transition-property: top, background-color, color;
+      -webkit-transition-duration: .25s, .5s, .5s;
+      -webkit-transition-delay: 0, .4s, .4s;
+      -moz-transition-property: top, background-color, color;
+      -moz-transition-duration: .25s, .5s, .5s;
+      -moz-transition-delay: 0, .4s, .4s;
+      -ms-transition-property: top, background-color, color;
+      -ms-transition-duration: .25s, .5s, .5s;
+      -ms-transition-delay: 0, .4s, .4s;
+      -o-transition-property: top, background-color, color;
+      -o-transition-duration: .25s, .5s, .5s;
+      -o-transition-delay: 0, .4s, .4s;
+      transition-property: top, background-color, color;
+      transition-duration: .25s, .5s, .5s;
+      transition-delay: 0, .4s, .4s;
+
+      @include sb-media(36em) {
+        left: 3%;
+      }
+    }
+  }
+  
+  .aka-details {
+    z-index: 5;
+
+    .js & {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    list-style: none;
+    margin: .75em 0 0 .5em;
+    padding: 0;
+        
+    @include sb-media(90em) {
+      max-width: 75%;
+    }
+    
+    li {
+      width: 33%;
+      /*height: 2em;*/
+      float: left;
+      text-align: center;
+      margin: 0;//.6em 0 0 0;
+      padding: 0;
+    }
+    
+    a {
+      display: block;
+      color: #999;
+      font-size: .8em;
+      padding: .75em;
+      margin: 0;//.5em;
+
+      .js &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+body.open {
+  border-top: 8em solid #000;
+  
+  .aka {
+    .js & {
+      top: 11.75em;
+    }
+    background-color: #000;
+    color: #999;
+  }
+}
+
+.no-js body {
+  .aka {
+    display: none;
+  }
+  aside a {
+    color: $almost-black;
+  }
+}
