@@ -457,7 +457,6 @@ ol.past li {
       float: left;
       clear: left; }
       ol.past li:nth-child(2n) {
-        float: right;
         clear: none;
         margin-right: 0; } }
   @media (min-width: 36em) {
@@ -471,7 +470,6 @@ ol.past li {
       float: left;
       clear: left; }
       ol.past li:nth-child(2n) {
-        float: right;
         clear: none;
         margin-right: 0; } }
 

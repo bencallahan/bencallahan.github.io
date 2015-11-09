@@ -444,7 +444,6 @@ ol.past li {
   width: 100%;
   margin-right: 0; }
   ol.past li:nth-child(2n) {
-    float: right;
     clear: none;
     margin-right: 0; }
 

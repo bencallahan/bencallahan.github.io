@@ -13,7 +13,7 @@ body {
   -o-transition-duration: .25s;
   transition-property: border-top-width;
   transition-duration: .25s;
-  
+
   &.largish {
     background: $primary-color url(../i/ben-logo-768.png) 50% bottom fixed no-repeat;
 
@@ -34,14 +34,14 @@ body {
   position: relative;
   float: left;
   z-index: 10; // to cover the affiliations
-    
+
   .largish & {
     margin-bottom: 650px;
     -moz-box-shadow: 2px 2px 50px 2px #000;
     -webkit-box-shadow: 2px 2px 50px 2px #000;
     box-shadow: 2px 2px 50px 2px #000;
   }
-  
+
   @include sb-media(36em) {
     padding: 0 3% 1.5em 3%;
   }
@@ -55,7 +55,7 @@ body {
 a {
   color: $primary-color;
   text-decoration: none;
-  
+
   &:hover {
     text-decoration: underline;
   }
@@ -77,7 +77,7 @@ h1.major {
     padding-top: .5em;
     font-size: 2em;
   }
-  
+
   .wf-active & {
     font-size: 1.35em;
 
@@ -86,7 +86,7 @@ h1.major {
       padding-top: 1.6em;
     }
   }
-  
+
   .backgroundsize /* .smallish */ & {
     padding-right: 100px;
     vertical-align: baseline;
@@ -103,10 +103,10 @@ h2 {
   font-weight: 700;
   padding: 1em 0 .5em 0;
   margin: 0;
-  
+
   text-transform: uppercase;
   color: $secondary-color;
-  
+
   clear: left;
 }
 
@@ -117,7 +117,7 @@ h2 {
     width: 48%;
     float: left;
     margin-right: 2%;
-    
+
     &:nth-child(2n + 1) {
       float: right;
       margin: 0;
@@ -128,36 +128,36 @@ h2 {
     list-style: none;
     padding: 0;
     margin: 0;
-        
+
     a, time, b, p {
       @include my-museo;
       font-weight: 300;
       font-weight: 300;
       line-height: 1.4em;
     }
-    
+
     time, b {
       font-size: .9em;
       color: $secondary-color;
       display: block;
     }
-    
+
     a.drill-down {
       font-weight: 500;
       font-size: 1.2em;
       margin-bottom: .25em;
     }
-    
+
     p {
       margin: .25em 0;
       padding: 0;
     }
-    
+
     li {
       margin-bottom: 1.5em;
     }
   }
-  
+
   h3 {
     @include my-museo;
     color: $secondary-color;
@@ -181,7 +181,7 @@ ol.past li {
     clear: left;
 
     &:nth-child(2n) {
-      float: right;
+      // float: right;
       clear: none;
       margin-right: 0;
     }
@@ -199,7 +199,7 @@ ol.past li {
     clear: left;
 
     &:nth-child(2n) {
-      float: right;
+      // float: right;
       clear: none;
       margin-right: 0;
     }
@@ -247,7 +247,7 @@ aside {
       }
     }
   }
-  
+
   .aka-details {
     z-index: 5;
 
@@ -261,11 +261,11 @@ aside {
     list-style: none;
     margin: .75em 0 0 .5em;
     padding: 0;
-        
+
     @include sb-media(90em) {
       max-width: 75%;
     }
-    
+
     li {
       width: 33%;
       /*height: 2em;*/
@@ -274,7 +274,7 @@ aside {
       margin: 0;//.6em 0 0 0;
       padding: 0;
     }
-    
+
     a {
       display: block;
       color: #999;
@@ -292,7 +292,7 @@ aside {
 
 body.open {
   border-top: 8em solid #000;
-  
+
   .aka {
     .js & {
       top: 11.75em;
