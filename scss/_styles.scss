@@ -110,7 +110,9 @@ h2 {
   clear: left;
 }
 
-
+h4.sub-title {
+  margin: -1em 0 0;
+}
 
 .group {
   @include sb-media(36em) {

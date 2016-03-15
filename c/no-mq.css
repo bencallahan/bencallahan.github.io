@@ -393,6 +393,9 @@ h2 {
   .wf-active h2 {
     font-family: "museo-sans"; }
 
+h4.sub-title {
+  margin: -1em 0 0; }
+
 .group {
   width: 48%;
   float: left;
