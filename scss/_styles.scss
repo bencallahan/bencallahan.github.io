@@ -64,28 +64,23 @@ a {
 
 
 h1.major {
-  @include my-museo;
+  @include my-headings;
 
-  font-size: 1.35em;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: $almost-black;//$primary-color;
+  font-size: 1.75em;
+  color: $almost-black;
   margin: 0;
   padding: 2.4em 0 0 0;
 
   .no-js & {
     padding-top: .5em;
-    font-size: 2em;
   }
 
-  .wf-active & {
-    font-size: 1.35em;
 
-    @include sb-media(36em) {
-      font-size: 2em;
-      padding-top: 1.6em;
-    }
+  @include sb-media(36em) {
+    font-size: 2.5em;
+    padding-top: 1.4em;
   }
+
 
   .backgroundsize /* .smallish */ & {
     padding-right: 100px;
@@ -99,18 +94,24 @@ h1.major {
 
 
 h2 {
-  @include my-museo;
-  font-weight: 700;
+  @include my-headings;
   padding: 1em 0 .5em 0;
   margin: 0;
-
-  text-transform: uppercase;
   color: $secondary-color;
 
   clear: left;
 }
 
+h4.sub-title {
+  @include my-body;
+  margin: -.5em 0 0;
+  font-size: 1em;
 
+  @include sb-media(36em) {
+    margin-top: -.5em;
+    font-size: 1.2em;
+  }
+}
 
 .group {
   @include sb-media(36em) {
@@ -130,7 +131,7 @@ h2 {
     margin: 0;
 
     a, time, b, p {
-      @include my-museo;
+      @include my-body;
       font-weight: 300;
       font-weight: 300;
       line-height: 1.4em;
@@ -159,7 +160,7 @@ h2 {
   }
 
   h3 {
-    @include my-museo;
+    @include my-headings;
     color: $secondary-color;
     padding: 1em 0 .5em 0;
     margin: 0;
@@ -181,7 +182,6 @@ ol.past li {
     clear: left;
 
     &:nth-child(2n) {
-      // float: right;
       clear: none;
       margin-right: 0;
     }
@@ -199,7 +199,6 @@ ol.past li {
     clear: left;
 
     &:nth-child(2n) {
-      // float: right;
       clear: none;
       margin-right: 0;
     }
@@ -209,7 +208,7 @@ ol.past li {
 
 aside {
   .aka {
-    font-weight: normal;
+    @include my-body;
     text-transform: uppercase;
     font-size: .75em;
     letter-spacing: .1em;
@@ -259,7 +258,7 @@ aside {
     }
 
     list-style: none;
-    margin: .75em 0 0 .5em;
+    margin: .25em 0 0 0;
     padding: 0;
 
     @include sb-media(90em) {
@@ -268,19 +267,19 @@ aside {
 
     li {
       width: 33%;
-      /*height: 2em;*/
       float: left;
       text-align: center;
-      margin: 0;//.6em 0 0 0;
+      margin: 0;
       padding: 0;
     }
 
     a {
+      @include my-body;
       display: block;
       color: #999;
       font-size: .8em;
       padding: .75em;
-      margin: 0;//.5em;
+      margin: 0;
 
       .js &:hover {
         color: #fff;
