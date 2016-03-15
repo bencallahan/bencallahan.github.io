@@ -1,7 +1,15 @@
 @mixin my-museo {
   font-family: sans-serif;
-  
+
   .wf-active & {
     font-family: "museo-sans";
   }
+}
+
+@mixin my-headings {
+  font-family: 'Slabo 13px', serif;
+}
+
+@mixin my-body {
+  font-family: 'Titillium Web', sans-serif;
 }
