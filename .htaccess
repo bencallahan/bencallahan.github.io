@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^words.bencallahan.com$ [NC]
+RewriteRule ^(.*)$ https://prose.bencallahan.com/$1 [R=301,L]
